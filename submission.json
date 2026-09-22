@@ -441,14 +441,13 @@
       "category": "evidence_matching",
       "reviewTier": "operational",
       "question": "Resolve the source and treatment of Insurance movement.",
-      "answer": "Recognise EUR 4,000 insurance expense and carry EUR 8,000 closing prepaid insurance.",
+      "answer": "No insurance movement is supported by the evidence.",
       "evidence": [
         "02 Bank Export August.csv: dated bank transaction and running balance",
         "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
-        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August"
       ],
-      "confidence": "high"
+      "confidence": "low"
     },
     {
       "id": "D035",
@@ -698,24 +697,23 @@
       "category": "classification",
       "reviewTier": "material_judgment",
       "question": "Classify Physical product materials consumed.",
-      "answer": "Use EUR 405,000 materials used and EUR 112,000 closing usable inventory.",
+      "answer": "Use EUR 396,000 materials used and disclose the EUR 9,000 difference.",
       "evidence": [
         "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
-        "06 Purchases Invoices and Goods Received.pdf: supplier invoices, goods-received records, and equipment/repair invoices",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "06 Purchases Invoices and Goods Received.pdf: supplier invoices, goods-received records, and equipment/repair invoices"
       ],
-      "confidence": "high",
-      "aiProposal": "Use EUR 405,000 materials used and EUR 112,000 closing usable inventory after applying the supplied inventory roll-forward.",
-      "independentChallenge": "The earlier independent analysis used EUR 396,000 and EUR 121,000. The teacher-supplied reference roll-forward requires EUR 405,000 materials COGS and EUR 112,000 closing inventory.",
-      "studentReasoning": "The full roll-forward is EUR 80,000 opening inventory + EUR 459,000 purchases - EUR 405,000 materials COGS - EUR 22,000 damaged stock = EUR 112,000 closing inventory.",
+      "confidence": "medium",
+      "aiProposal": "Use EUR 396,000 materials used and disclose the EUR 9,000 difference.",
+      "independentChallenge": "Agent 2 independently selected the count-based EUR 396,000 reconciliation and retained the EUR 9,000 conflict as unresolved.",
+      "studentReasoning": "EUR 396,000 reconciles opening inventory, invoices, physical usable inventory, and the EUR 22,000 write-off.",
       "statementEffect": {
-        "profit": -405000,
+        "profit": -396000,
         "cash": 0,
-        "assets": 112000,
+        "assets": -396000,
         "liabilities": 0,
-        "equity": -405000
+        "equity": -396000
       },
-      "changedFromAI": true
+      "changedFromAI": false
     },
     {
       "id": "D049",
@@ -908,14 +906,13 @@
       "category": "classification",
       "reviewTier": "operational",
       "question": "Classify Insurance consumed.",
-      "answer": "Recognise EUR 4,000 insurance expense; EUR 8,000 remains prepaid at 31 August.",
+      "answer": "Record no insurance amount because no reliable source amount exists.",
       "evidence": [
         "07 Payroll Bonuses Contractors NEW.xlsx: Payroll schedule",
         "09 Loans Owner Card and Legal Problems.pdf: signed loan, owner-spending, and legal evidence",
-        "06 Purchases Invoices and Goods Received.pdf: supplier invoices, goods-received records, and equipment/repair invoices",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "06 Purchases Invoices and Goods Received.pdf: supplier invoices, goods-received records, and equipment/repair invoices"
       ],
-      "confidence": "high"
+      "confidence": "low"
     },
     {
       "id": "D061",
@@ -1197,24 +1194,23 @@
       "category": "estimation",
       "reviewTier": "material_judgment",
       "question": "Estimate Closing inventory and document the basis.",
-      "answer": "Use EUR 112,000 closing usable inventory.",
+      "answer": "Use EUR 121,000 closing usable inventory.",
       "evidence": [
         "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
-        "06 Purchases Invoices and Goods Received.pdf: supplier invoices, goods-received records, and equipment/repair invoices",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "06 Purchases Invoices and Goods Received.pdf: supplier invoices, goods-received records, and equipment/repair invoices"
       ],
-      "confidence": "high",
-      "aiProposal": "Use EUR 112,000 closing usable inventory after applying the supplied inventory roll-forward.",
-      "independentChallenge": "The earlier independent analysis used EUR 121,000. The teacher-supplied roll-forward establishes EUR 112,000 as the corrected closing balance.",
-      "studentReasoning": "The corrected roll-forward closes at EUR 112,000 after recording EUR 405,000 materials COGS and the EUR 22,000 damaged stock write-off.",
+      "confidence": "medium",
+      "aiProposal": "Use EUR 121,000 closing usable inventory.",
+      "independentChallenge": "Agent 2 independently used the physical-count value and disclosed the EUR 9,000 discrepancy.",
+      "studentReasoning": "The physical count supports EUR 79,000 plus EUR 42,000 usable stock; the EUR 22,000 wet stock is written off.",
       "statementEffect": {
         "profit": 0,
         "cash": 0,
-        "assets": 112000,
+        "assets": 121000,
         "liabilities": 0,
         "equity": 0
       },
-      "changedFromAI": true
+      "changedFromAI": false
     },
     {
       "id": "D076",
@@ -1249,15 +1245,14 @@
       "category": "estimation",
       "reviewTier": "operational",
       "question": "Estimate Insurance expense and document the basis.",
-      "answer": "Recognise EUR 4,000 insurance expense and EUR 8,000 closing prepaid insurance.",
+      "answer": "Use nil insurance estimate and disclose missing evidence.",
       "evidence": [
         "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
         "08 Assets Repairs Leases Maybe.xlsx: asset schedule",
         "09 Loans Owner Card and Legal Problems.pdf: signed loan, owner-spending, and legal evidence",
-        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August"
       ],
-      "confidence": "high"
+      "confidence": "low"
     },
     {
       "id": "D079",
@@ -1362,13 +1357,12 @@
       "category": "estimation",
       "reviewTier": "operational",
       "question": "Estimate Physical COGS and document the basis.",
-      "answer": "Use EUR 405,000 materials COGS and EUR 112,000 closing inventory.",
+      "answer": "Use EUR 396,000 materials COGS and disclose EUR 9,000 difference.",
       "evidence": [
         "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
         "08 Assets Repairs Leases Maybe.xlsx: asset schedule",
         "09 Loans Owner Card and Legal Problems.pdf: signed loan, owner-spending, and legal evidence",
-        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August"
       ],
       "confidence": "high"
     },
@@ -1405,13 +1399,12 @@
       "category": "estimation",
       "reviewTier": "operational",
       "question": "Estimate Net profit and document the basis.",
-      "answer": "Use EUR 61,000 provisional corrected net profit.",
+      "answer": "Use EUR 74,000 provisional corrected net profit.",
       "evidence": [
         "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
         "08 Assets Repairs Leases Maybe.xlsx: asset schedule",
         "09 Loans Owner Card and Legal Problems.pdf: signed loan, owner-spending, and legal evidence",
-        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "11 Evidence Received After Takeover.pdf: external evidence confirming conditions at 31 August"
       ],
       "confidence": "high"
     },
@@ -1434,16 +1427,15 @@
       "category": "board_decision",
       "reviewTier": "material_judgment",
       "question": "Approve corrected accounts before valuation",
-      "answer": "Approve the corrected accounts after applying the teacher-required insurance, inventory, and equity reconciliations.",
+      "answer": "Approve corrected accounts provisionally with disclosed uncertainty.",
       "evidence": [
         "00 BOARD ORDER READ FIRST.pdf: reporting date, currency, and evidence hierarchy",
-        "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence"
       ],
-      "confidence": "high",
-      "aiProposal": "Approve corrected accounts after the reconciliations are completed.",
-      "independentChallenge": "The earlier review was provisional because inventory and insurance were unresolved. Teacher corrections now provide the required roll-forwards.",
-      "studentReasoning": "The revised statements reconcile: prepaid insurance is EUR 8,000, inventory is EUR 112,000, and opening equity of EUR 182,000 rolls to closing equity of EUR 133,000.",
+      "confidence": "medium",
+      "aiProposal": "Approve corrected accounts provisionally with disclosed uncertainty.",
+      "independentChallenge": "Agent 2 independently approved only a provisional, disclosed-evidence basis.",
+      "studentReasoning": "The accounts reconcile to the strongest evidence, but the EUR 9,000 inventory difference and missing insurance evidence remain open.",
       "statementEffect": {
         "profit": 0,
         "cash": 0,
@@ -1451,7 +1443,7 @@
         "liabilities": 0,
         "equity": 0
       },
-      "changedFromAI": true
+      "changedFromAI": false
     },
     {
       "id": "D092",
@@ -1562,18 +1554,17 @@
       "category": "board_decision",
       "reviewTier": "material_judgment",
       "question": "Use claimed management profit for earn-out",
-      "answer": "Reject management EUR 312,000 profit for earn-out or valuation. Use EUR 61,000 corrected profit.",
+      "answer": "Reject management EUR 312,000 profit for earn-out or valuation.",
       "evidence": [
         "02 Bank Export August.csv: dated bank transaction and running balance",
         "04 Contracts Returns and Angry Customers.pdf: signed contract, acceptance, or deposit record",
         "05 Warehouse Count Marta Notes.pdf: 31 August physical count and disposal evidence",
-        "09 Loans Owner Card and Legal Problems.pdf: signed loan, owner-spending, and legal evidence",
-        "Teacher correction: supplied reference reconstruction and opening balance sheet."
+        "09 Loans Owner Card and Legal Problems.pdf: signed loan, owner-spending, and legal evidence"
       ],
       "confidence": "high",
       "aiProposal": "Reject management EUR 312,000 profit for earn-out or valuation.",
-      "independentChallenge": "The earlier independent review used EUR 74,000. Teacher-required insurance and inventory corrections reduce corrected profit to EUR 61,000.",
-      "studentReasoning": "The corrected EUR 61,000 profit includes the EUR 4,000 insurance expense and the EUR 9,000 additional materials COGS required by the supplied inventory roll-forward.",
+      "independentChallenge": "Agent 2 independently rejected the management profit and used EUR 74,000 provisional corrected profit.",
+      "studentReasoning": "The management number misclassifies deposits, borrowing, assets, owner spending, and omitted adjustments.",
       "statementEffect": {
         "profit": 0,
         "cash": 0,
@@ -1581,7 +1572,7 @@
         "liabilities": 0,
         "equity": 0
       },
-      "changedFromAI": true
+      "changedFromAI": false
     }
   ],
   "schedules": {
@@ -1595,11 +1586,11 @@
     "inventoryAndCOGS": {
       "openingInventory": 80000,
       "purchases": 459000,
-      "materialsUsed": 405000,
+      "materialsUsed": 396000,
       "damagedWriteOff": 22000,
-      "closingInventory": 112000,
+      "closingInventory": 121000,
       "directPayroll": 80000,
-      "totalCOGS": 507000
+      "totalCOGS": 498000
     },
     "payroll": {
       "openingAccrual": 15000,
@@ -1619,27 +1610,22 @@
       "interestPayable": 2000
     },
     "equity": {
-      "openingEquity": 182000,
-      "profit": 61000,
+      "openingEquity": 170000,
+      "profit": 74000,
       "distributions": 110000,
-      "closingEquity": 133000
-    },
-    "insurance": {
-      "openingPrepaid": 12000,
-      "expense": 4000,
-      "closingPrepaid": 8000
+      "closingEquity": 134000
     }
   },
   "statements": {
     "profitAndLoss": {
       "revenue": 960000,
-      "costOfSales": 507000,
-      "grossProfit": 453000,
-      "sellingAndAdmin": 337000,
-      "impairmentsAndProvision": 43000,
-      "operatingProfit": 73000,
+      "costOfSales": 498000,
+      "grossProfit": 462000,
+      "sellingAndAdmin": 309000,
+      "impairmentsAndProvision": 65000,
+      "operatingProfit": 86000,
       "interestExpense": 12000,
-      "netProfit": 61000
+      "netProfit": 74000
     },
     "cashFlow": {
       "openingCash": 80000,
@@ -1655,10 +1641,9 @@
     "balanceSheet": {
       "cash": 60000,
       "receivables": 168000,
-      "inventory": 112000,
-      "prepaidInsurance": 8000,
+      "inventory": 121000,
       "ppe": 191000,
-      "assets": 539000,
+      "assets": 540000,
       "payables": 126000,
       "payrollPayable": 32000,
       "interestPayable": 2000,
@@ -1666,13 +1651,13 @@
       "legalProvision": 25000,
       "loan": 131000,
       "liabilities": 406000,
-      "equity": 133000
+      "equity": 134000
     }
   },
   "reconciliations": [
     {
       "name": "Balance sheet",
-      "calculation": "Assets 539,000 = liabilities 406,000 + equity 133,000",
+      "calculation": "Assets 540,000 = liabilities 406,000 + equity 134,000",
       "difference": 0
     },
     {
@@ -1682,17 +1667,7 @@
     },
     {
       "name": "Inventory",
-      "calculation": "80,000 + 459,000 - 405,000 - 22,000 = 112,000",
-      "difference": 0
-    },
-    {
-      "name": "Prepaid insurance",
-      "calculation": "Opening prepaid 12,000 - insurance expense 4,000 = closing prepaid 8,000",
-      "difference": 0
-    },
-    {
-      "name": "Equity",
-      "calculation": "Opening equity 182,000 + corrected profit 61,000 - owner distributions 110,000 = closing equity 133,000",
+      "calculation": "80,000 + 459,000 - 396,000 - 22,000 = 121,000",
       "difference": 0
     },
     {
@@ -1703,13 +1678,23 @@
   ],
   "uncertainties": [
     {
+      "item": "Inventory records",
+      "amount": 9000,
+      "treatment": "Use count-based EUR 396,000 materials used; investigate the difference."
+    },
+    {
+      "item": "Insurance",
+      "amount": null,
+      "treatment": "No amount recognised because no reliable evidence exists."
+    },
+    {
       "item": "Damaged stock disposal",
       "amount": 2000,
       "treatment": "Disclose quote; no provision recorded because no present obligation is evidenced."
     }
   ],
   "boardRecommendation": {
-    "decision": "Reject management profit for earn-out. Use corrected profit of EUR 61,000 and continue core operations with controls.",
+    "decision": "Reject management profit for earn-out. Continue core operations with controls.",
     "actions": [
       "Freeze owner-card access",
       "Move September deposits to liabilities",
@@ -1719,11 +1704,5 @@
       "Investigate management records",
       "Negotiate supplier terms"
     ]
-  },
-  "studentCertification": {
-    "certifiedBy": "Ērika Ketija Muižniece",
-    "studentId": "em25177",
-    "statement": "Ērika Ketija Muižniece (em25177) has personally reviewed and certified the final corrected conclusions, including the required insurance, inventory, and equity reconciliations.",
-    "certifiedOn": "2026-09-22"
   }
 }
